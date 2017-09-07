@@ -4,7 +4,8 @@ pipeline {
     stage('Build') {
       steps {
         sh '''echo "First pipeline"
-java -version'''
+java -version
+mvn -version'''
       }
     }
   }
