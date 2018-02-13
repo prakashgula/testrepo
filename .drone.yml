@@ -1,0 +1,15 @@
+pipeline:
+  frontend:
+    image: node
+    commands:
+      - npm install
+      - npm test
+  backend:
+    image: golang
+    commands:
+      - go test -v
+      - go install
+
+services:
+  database:
+    image: mysql
